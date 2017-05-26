@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.renjue.yuzhilai.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+    <com.zhy.autolayout.AutoFrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></com.zhy.autolayout.AutoFrameLayout>
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/rb_study"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="学习"
+            android:textColor="@drawable/bg_text"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/bg_study"/>
+        <RadioButton
+            android:id="@+id/rb_course"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="课程"
+            android:textColor="@drawable/bg_text"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:button="@null"
+            android:drawableTop="@drawable/bg_course"/>
+        <RadioButton
+            android:id="@+id/rb_mine"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="我的"
+            android:textColor="@drawable/bg_text"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:button="@null"
+            android:drawableTop="@drawable/bg_mine"/>
+    </RadioGroup>
+</com.zhy.autolayout.AutoLinearLayout>
